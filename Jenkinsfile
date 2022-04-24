@@ -20,8 +20,7 @@ pipeline {
         stage('Deploy') {
 
             steps {
-            sh'
-                echo Environment is =${ENV_VAR}...'
+          
             }
         }
     }
