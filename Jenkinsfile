@@ -1,10 +1,14 @@
 pipeline {
     agent any
+    environment{
+    USER_CRED= credentials("SSH")
+    }
 
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                sh 'env'
+
             }
         }
     }
