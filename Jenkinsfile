@@ -1,11 +1,15 @@
 pipeline {
     agent any
-
+    environment{
+    ENV_VAR="pipeline.google.in"
+    }
     stages {
         stage('Build') {
             steps {
-                
-                echo 'Building...'
+                sh'''
+                echo Environment var is ${ENV_VAR}
+                echo Building...
+                '''
             }
         }
         stage('Test') {
@@ -14,8 +18,9 @@ pipeline {
             }
         }
         stage('Deploy') {
+        
             steps {
-                echo 'Deploying...'
+                echo 'Environment is =${ENV_VAR}...'
             }
         }
     }
