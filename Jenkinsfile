@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                addShortText background: '', boarderColor: '', color: '', link: '', text: 'One'
+                
                 echo 'Building...'
             }
         }
