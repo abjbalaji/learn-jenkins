@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    environment{
-    USER_CRED= credentials("SSH")
-    }
+
    parameters {
            string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
@@ -19,13 +17,9 @@ pipeline {
          }
     stages {
         stage('Hello') {
-        environment{
-            USER_CRED= credentials("SSH")
-            }
-        parameters {
-                   string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?') }
+
             steps {
-                sh 'env'
+                
                 echo "hello how are you"
 
             }
