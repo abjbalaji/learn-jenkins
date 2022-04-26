@@ -26,7 +26,7 @@ pipeline {
                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?') }
             steps {
                 sh 'env'
-                echo 'hello how are you'
+                echo "hello how are you"
 
             }
         }
