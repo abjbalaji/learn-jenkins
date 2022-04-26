@@ -13,13 +13,16 @@ pipeline {
            password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
 
+    tools {
+    maven 'maven-3.8.5'
+    }
     stages {
         stage('Hello') {
 
             steps {
 
                 echo "hello gjoljfklgjrfgkljro are you"
-
+                sh 'mvn --version'
             }
         }
     }
