@@ -41,17 +41,17 @@ pipeline{
             parallel{
                     stage('one'){
                         steps{
-                         sh 'sleep 10'
+                         sh 'sleep 1'
                         }
                     }
                     stage('two'){
                               steps{
-                               sh 'sleep 10'
+                               sh 'sleep 1'
                               }
                              }
                     stage('three'){
                                 steps{
-                                 sh 'sleep 10'
+                                 sh 'sleep 1'
                                 }
                             }
                     }
