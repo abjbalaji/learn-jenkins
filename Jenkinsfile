@@ -13,13 +13,13 @@ pipeline {
            password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
     triggers {
-        cron('*/1 * * * *')
+        cron('* * * * *')
          }
     stages {
         stage('Hello') {
 
             steps {
-                
+
                 echo "hello how are you"
 
             }
